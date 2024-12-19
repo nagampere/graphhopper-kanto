@@ -55,6 +55,8 @@ docker run -p 8989:8989 graphhopper-kanto -c config-gh.yml --host 0.0.0.0
 ```
 
 ## 利用方法
+dockerで起動しているアプリケーションは、localhost機能を使ってhttp経由で利用することができる。
+
 ### ブラウザ上で動作確認する
 - [http://localhost:8989](http://localhost:8989)にアクセス
 ![Image 4](pic_test_1.png)
