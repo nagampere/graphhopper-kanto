@@ -29,7 +29,7 @@ Setting > Resources > Advancedで、dockerに割り当てるCPU・メモリを�
 - docker desktop で操作する場合
   1. docker desktopを起動後、上部のSearchで「nagampere0508/graphhopper-kanto」と検索しRunをクリック
   ![Image 1](pic_docker_desktop_1.png)
-  2. コンテナの名前を入力し(①)、ポート番号にそれぞれ8989と8990と入力する。
+  2. コンテナの名前を入力し(①)、ポート番号にそれぞれ8989と8990と入力する(②)。
   ![Image 2](pic_docker_desktop_2.png)
   3. 「Started Server」と表示されて、サーバーが起動するまで15分ほど待つ
   ![Image 3](pic_docker_desktop_3.png)
@@ -76,10 +76,10 @@ base_url = 'http://localhost:8989/isochrone'
 # クエリの設定
 query = {
   "point": "35.475090001366574,139.54998499885238", # 基準地点
-  "time_limit": "600", # 到達時間
-  # "distance_limit": "400", # 到達圏は400mに設定
+  "time_limit": "600", # 到達時間は600秒に設定
+  # "distance_limit": "400", # 到達距離は400mに設定
   "profile": "foot", # 移動手段
-  "reverse_flow": "false" # 基準地点が目的地か否か
+  "reverse_flow": "false" # 基準地点が出発ならfalse、**到着地ならtrue**
 }
 
 response = requests.get(base_url, query)
