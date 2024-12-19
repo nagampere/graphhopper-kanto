@@ -60,7 +60,7 @@ dockerで起動しているアプリケーションは、localhost機能を使�
 ### ブラウザ上で動作確認する
 - [http://localhost:8989](http://localhost:8989)にアクセス
 ![Image 4](pic_test_1.png)
-- [localhost:8989/maps/isochrone/index.html](localhost:8989/maps/isochrone/index.html)にアクセス
+- [http://localhost:8989/maps/isochrone/index.html](http://localhost:8989/maps/isochrone/index.html)にアクセス
 ![Image 5](pic_test_2.png)
 
 ### requests.getでデータを取得する
