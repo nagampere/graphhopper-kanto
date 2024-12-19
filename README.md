@@ -31,7 +31,7 @@ Setting > Resources > Advancedで、dockerに割り当てるCPU・メモリを�
   ![Image 1](pic_docker_desktop_1.png)
   2. コンテナの名前を入力し(①)、ポート番号にそれぞれ8989と8990と入力する。
   ![Image 2](pic_docker_desktop_2.png)
-  3. 「Started Server」と表示されて、サーバーが起動するまで待つ
+  3. 「Started Server」と表示されて、サーバーが起動するまで15分ほど待つ
   ![Image 3](pic_docker_desktop_3.png)
 
 - bashを使う場合
