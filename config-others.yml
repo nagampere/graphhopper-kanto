@@ -1,0 +1,20 @@
+JAVA_OPTS: "-Xmx4g -Xms4g"
+selected: kanto
+
+urls:
+  - name: hokkaido
+    url: https://download.geofabrik.de/asia/japan/hokkaido-latest.osm.pbf
+  - name: tohoku
+    url: https://download.geofabrik.de/asia/japan/tohoku-latest.osm.pbf
+  - name: kanto
+    url: https://download.geofabrik.de/asia/japan/kanto-latest.osm.pbf 
+  - name: chubu
+    url: https://download.geofabrik.de/asia/japan/chubu-latest.osm.pbf
+  - name: kansai
+    url: https://download.geofabrik.de/asia/japan/kansai-latest.osm.pbf
+  - name: chugoku
+    url: https://download.geofabrik.de/asia/japan/chugoku-latest.osm.pbf
+  - name: shikoku
+    url: https://download.geofabrik.de/asia/japan/shikoku-latest.osm.pbf
+  - name: kyushu
+    url: https://download.geofabrik.de/asia/japan/kyushu-latest.osm.pbf
