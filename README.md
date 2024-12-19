@@ -48,7 +48,7 @@ cd <任意の作業ディレクトリ>
 git clone https://github.com/nagampere/graphhopper-kanto.git
 
 # docker imageのbuild
-ls graphhopper-kanto
+cd graphhopper-kanto
 sh build.sh 
 # docker containerの起動
 docker run -p 8989:8989 graphhopper-kanto -c config-gh.yml --host 0.0.0.0
