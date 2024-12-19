@@ -66,7 +66,7 @@ dockerで起動しているアプリケーションは、localhost機能を使�
 ### requests.getでデータを取得する
 使い方は[graphhopper API](https://docs.graphhopper.com)とほぼ同じ。
 
-相違点は、①ベースURLの"https://graphhopper.com/api/1"が"http://localhost:8989"に変更、②APIキーを入れる"key"クエリを省略
+相違点は、①ベースURLの"https://graphhopper.com/api/1" が"http://localhost:8989"に変更、②APIキーを入れる"key"クエリを省略
 
 例：python
 ``` python
