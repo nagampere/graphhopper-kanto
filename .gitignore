@@ -3,3 +3,4 @@
 .*un~
 data/
 graphhopper/
+.DS_Store
