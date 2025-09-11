@@ -41,7 +41,9 @@ else
   (cd graphhopper; git checkout master; git pull)
 fi
 
-imagename="graphhopper-kanto:${1:-latest}"
+# Read the selected region from config-others.yml
+selected_region=$(grep "^selected:" config-others.yml | awk '{print $2}')
+imagename="graphhopper-${selected_region:-null}:${1:-latest}"
 if [ "$1" ]; then
   echo "Checking out graphhopper:$1"
   (cd graphhopper; git checkout --detach "$1")

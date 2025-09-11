@@ -54,6 +54,19 @@ sh build.sh
 docker run -p 8989:8989 graphhopper-kanto -c config-gh.yml --host 0.0.0.0
 ```
 
+### ディレクトリを編集して、対象地域を変更する場合
+
+  1. `cd graphhopper-kanto`までは、上記の作業と同じ
+  2. config-othersの`selected:kanto`を、`selected:kansai`や`selected:hokkaido`に変更する
+  3. `sh build.sh`の実行
+  4. 任意の地域名で作成されたdocker image(例:`graphhopper-kansai`)から、docker containerを起動する
+ 
+```bash
+docker run -p 8989:8989 graphhopper-kansai -c config-gh.yml --host 0.0.0.0
+```
+
+
+
 ## 利用方法
 dockerで起動しているアプリケーションは、localhost機能を使ってhttp経由で利用することができる。
 
