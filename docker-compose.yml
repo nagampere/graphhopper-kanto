@@ -1,0 +1,36 @@
+services:
+  graphhopper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        REGION: ${REGION:-kanto}
+        JAVA_OPTS: ${JAVA_OPTS:-"-Xmx1g -Xms1g"}
+    # Optional image name using env vars (useful for push or local caching)
+    image: "graphhopper-${REGION:-kanto}:${TAG:-latest}"
+    env_file: .env
+    environment:
+      - JAVA_OPTS=${JAVA_OPTS:-"-Xmx1g -Xms1g"}
+      - REGION=${REGION:-kanto}
+    ports:
+      - "8989:8989"
+      - "8990:8990"
+    volumes:
+      # Mount local config files so you can edit them without rebuilding the image.
+      - ./config-gh.yml:/graphhopper/config-gh.yml:ro
+      - ./config-others.yml:/graphhopper/config-others.yml:ro
+      # Persistent data for downloaded map files, graphs, etc.
+      - gh_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8989/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    container_name: "graphhopper-${REGION:-kanto}"
+    restart: unless-stopped
+    # Pass runtime args to the image's ENTRYPOINT (graphhopper.sh already uses -c config-gh.yml)
+    # command: ["-p", "8989:8989", "-c", "config-gh.yml", "--host", "0.0.0.0"]
+
+volumes:
+  gh_data:
+    name: graphhopper_data

@@ -1,6 +1,3 @@
-JAVA_OPTS: "-Xmx4g -Xms4g"
-selected: kanto
-
 urls:
   - name: hokkaido
     url: https://download.geofabrik.de/asia/japan/hokkaido-latest.osm.pbf
