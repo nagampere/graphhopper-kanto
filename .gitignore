@@ -1,6 +1,8 @@
 .*~
 .*swp
 .*un~
+.env
+.DS_Store
 data/
 graphhopper/
-.DS_Store
+points.geojson
