@@ -3,7 +3,7 @@ graphhopper:
   # OpenStreetMap input file PBF or XML, can be changed via command line -Ddw.graphhopper.datareader.file=some.pbf
   datareader.file: ""
   # for multiple files you can use: gtfs.file: file1.zip,file2.zip,file3.zip
-  gtfs.file: gtfs-vbb.zip
+  # gtfs.file: gtfs-vbb.zip
   # Local folder used by graphhopper to store its data
   graph.location: graph-cache
 
