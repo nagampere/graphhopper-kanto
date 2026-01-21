@@ -15,6 +15,6 @@
   ],
   "speed": [
     { "if": "true", "limit_to": "foot_average_speed" },
-    { "if": "true", "multiply_by": "0.8" }
+    { "if": "true", "multiply_by": "0.96" }
   ]
 }
