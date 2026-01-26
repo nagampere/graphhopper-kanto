@@ -1,3 +1,4 @@
+name: "graphhopper-${REGION:-kanto}"
 services:
   graphhopper:
     build:
@@ -33,4 +34,4 @@ services:
 
 volumes:
   gh_data:
-    name: graphhopper_data
+    name: "graphhopper_data-${REGION:-kanto}"
